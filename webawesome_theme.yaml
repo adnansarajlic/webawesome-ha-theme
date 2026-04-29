@@ -58,14 +58,22 @@ WebAwesome:
   primary-color: "#0ea5e9"       # Brand Blue
   accent-color: "#f59e0b"        # Amber
   
+  # Semantic WebAwesome Colors (Använd dessa i dina kort!)
+  wa-success: "#10b981"          # Emerald
+  wa-warning: "#f59e0b"          # Amber
+  wa-danger: "#ef4444"           # Red
+  wa-info: "#0ea5e9"             # Sky Blue
+  wa-neutral: "#64748b"          # Slate
+  wa-purple: "#8b5cf6"           # Violet
+  
   # State Colors
   state-icon-color: "var(--secondary-text-color)"
   state-icon-active-color: "var(--primary-color)"
-  state-light-active-color: "#f59e0b"          # Warning / Amber
-  state-switch-active-color: "#10b981"         # Success / Emerald
-  state-binary_sensor-active-color: "#0ea5e9"  # Primary
-  state-climate-heating-color: "#ef4444"       # Danger / Red
-  state-climate-cooling-color: "#0ea5e9"       # Primary
+  state-light-active-color: "var(--wa-warning)"
+  state-switch-active-color: "var(--wa-success)"
+  state-binary_sensor-active-color: "var(--wa-info)"
+  state-climate-heating-color: "var(--wa-danger)"
+  state-climate-cooling-color: "var(--wa-info)"
   
   # Typografi
   ha-font-family-body: "'Inter', system-ui, -apple-system, sans-serif"
