@@ -116,23 +116,9 @@ WebAwesome:
         --wa-bg-neutral: color-mix(in srgb, var(--wa-neutral) 20%, transparent);
       }
       
-      /* GLOBAL ANIMATIONS */
-      /* Dessa kan nu anropas från vilket kort som helst i hela systemet! */
-      @keyframes wa-wobbling {
-        0% { transform: rotate(-25deg); }
-        100% { transform: rotate(25deg); }
-      }
-      @keyframes wa-steam {
-        0% { transform: translateY(0px) scale(1); opacity: 1; }
-        50% { transform: translateY(-1px) scale(1.05); opacity: 0.9; }
-        100% { transform: translateY(-2px) scale(1.1); opacity: 0.8; }
-      }
-      @keyframes wa-door {
-        0% { clip-path: inset(0 0 0 0); }
-        25%  { clip-path: polygon(0 0, 100% 0, 100% 100%, 68% 100%, 69% 73%, 32% 73%, 31% 100%, 0 100%); }
-        50%  { clip-path: polygon(0 0, 100% 0, 100% 100%, 68% 100%, 69% 61%, 32% 61%, 31% 100%, 0 100%); }
-        75% { clip-path: polygon(0 0, 100% 0, 100% 100%, 68% 100%, 69% 48%, 32% 48%, 31% 100%, 0 100%); }
-      }
+      /* NOTE: Animationer (@keyframes) kan INTE definieras globalt i temat */
+      /* pga Mushroom Cards 4-lagers Shadow DOM. Definiera dem istället */
+      /* direkt i ditt dashboard-korts card_mod nth-child $: block. */
     "ha-switch":
       $: |
         /* WebAwesome-inspirerad focus ring för switchar */
