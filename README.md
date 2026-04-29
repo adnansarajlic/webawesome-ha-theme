@@ -38,3 +38,36 @@ När temat är laddat:
 1. Gå till din profil i Home Assistant.
 2. Välj **WebAwesome** under Tema-inställningarna.
 3. Välj "Mörk" eller "Ljus" eller låt den följa systemet.
+
+### Styling av Mushroom Chips
+
+Temat innehåller inbyggda CSS-variabler (`--wa-bg-success`, `--wa-bg-danger`, etc.) som perfekt mixar färgerna med transparens för Mushroom Chips. Du kan använda dessa direkt inuti ett chip för att få en snygg färgkodning utan krångliga Hex-koder:
+
+```yaml
+type: custom:mushroom-chips-card
+chips:
+  - type: template
+    entity: switch.my_switch
+    card_mod:
+      style: |
+        ha-card {
+          --chip-background: {% if is_state('switch.my_switch', 'on') %} var(--wa-bg-warning) {% else %} var(--wa-bg-neutral) {% endif %};
+        }
+```
+
+#### Viktigt om Ikon-animationer
+På grund av hur Mushroom bygger upp sina kort med "Shadow DOM" (hela 4 nivåer djupt), kan du **inte** lägga `@keyframes` animationer direkt inuti ett enskilt chip.
+
+För att animera ikoner i Mushroom Chips måste du lägga en `card_mod` block på själva föräldrakortet (`mushroom-chips-card`) och rikta in dig på chippet via `nth-child()`, precis som exemplet nedan:
+
+```yaml
+card_mod:
+  style:
+    mushroom-template-chip:nth-child(1)$: |
+      ha-state-icon {
+        animation: spin 2s infinite;
+      }
+      @keyframes spin {
+        100% { transform: rotate(360deg); }
+      }
+```
