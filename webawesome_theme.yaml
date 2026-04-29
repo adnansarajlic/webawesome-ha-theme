@@ -1,0 +1,115 @@
+WebAwesome:
+  # ----------------------------------------------------------------------------
+  #  WEB AWESOME THEME
+  #  Inspiration: https://webawesome.com/docs/color-palettes
+  #  By: Atlas
+  # ----------------------------------------------------------------------------
+
+  modes:
+    light:
+      # Bakgrunder
+      primary-background-color: "#f8fafc"  # Slate 50
+      secondary-background-color: "#f1f5f9" # Slate 100
+      card-background-color: "#ffffff"     # Vit
+      
+      # Text
+      primary-text-color: "#0f172a"        # Slate 900
+      secondary-text-color: "#64748b"      # Slate 500
+      text-primary-color: "#ffffff"        # Text på primärfärg
+      
+      # 2026 Semantic Form Variables (WebAwesome Migration)
+      ha-color-form-background: "#ffffff"
+      ha-color-form-background-hover: "#f8fafc"
+      ha-color-form-background-disabled: "#e2e8f0"
+      
+      # Linjer och Gränser
+      divider-color: "rgba(15, 23, 42, 0.08)"
+      
+      # Shadow (Soft modern shadow)
+      ha-card-box-shadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)"
+
+    dark:
+      # Bakgrunder
+      primary-background-color: "#0f172a"  # Slate 900
+      secondary-background-color: "#020617" # Slate 950
+      card-background-color: "#1e293b"     # Slate 800
+      
+      # Text
+      primary-text-color: "#f8fafc"        # Slate 50
+      secondary-text-color: "#94a3b8"      # Slate 400
+      text-primary-color: "#ffffff"        # Text på primärfärg
+      
+      # 2026 Semantic Form Variables
+      ha-color-form-background: "#334155"  # Slate 700
+      ha-color-form-background-hover: "#475569" # Slate 600
+      ha-color-form-background-disabled: "#1e293b"
+      
+      # Linjer och Gränser
+      divider-color: "rgba(248, 250, 252, 0.08)"
+      
+      # Shadow (Subtle dark shadow)
+      ha-card-box-shadow: "0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3)"
+
+  # ----------------------------------------------------------------------------
+  #  GLOBAL VARIABLES (Gäller både Ljus och Mörk)
+  # ----------------------------------------------------------------------------
+  
+  # Brand Colors (WebAwesome Sky Palette)
+  primary-color: "#0ea5e9"       # Brand Blue
+  accent-color: "#f59e0b"        # Amber
+  
+  # State Colors
+  state-icon-color: "var(--secondary-text-color)"
+  state-icon-active-color: "var(--primary-color)"
+  state-light-active-color: "#f59e0b"          # Warning / Amber
+  state-switch-active-color: "#10b981"         # Success / Emerald
+  state-binary_sensor-active-color: "#0ea5e9"  # Primary
+  state-climate-heating-color: "#ef4444"       # Danger / Red
+  state-climate-cooling-color: "#0ea5e9"       # Primary
+  
+  # Typografi
+  ha-font-family-body: "'Inter', system-ui, -apple-system, sans-serif"
+  ha-font-family-heading: "'Inter', system-ui, -apple-system, sans-serif"
+  
+  # Hörn & Radie (WebAwesome använder lite mjukare hörn än default HA)
+  ha-card-border-radius: "12px"
+  ha-dialog-border-radius: "16px"
+  
+  # ----------------------------------------------------------------------------
+  #  CARD-MOD STYLING (Kräver thomasloven/lovelace-card-mod)
+  # ----------------------------------------------------------------------------
+  card-mod-theme: WebAwesome
+  card-mod-card-yaml: |
+    .: |
+      /* Smidig övergång när musen hovrar över alla vanliga kort */
+      ha-card {
+        transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+      }
+      ha-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
+        transform: translateY(-1px);
+      }
+      
+      /* Specifikt för Mushroom Chips-kort: Rundare hörn och extra padding */
+      :host(mushroom-chips-card) ha-card {
+        border-radius: 24px !important;
+        padding-left: 12px !important;
+        padding-bottom: 12px !important;
+      }
+    "ha-switch":
+      $: |
+        /* WebAwesome-inspirerad focus ring för switchar */
+        .mdc-switch:focus-within .mdc-switch__track {
+          outline: 2px solid var(--primary-color);
+          outline-offset: 2px;
+        }
+    "ha-input":
+      $: |
+        /* Anpassning för 2026 WebAwesome inputs */
+        .mdc-text-field {
+          border-radius: 8px !important;
+        }
+        .mdc-text-field:focus-within {
+          outline: 2px solid var(--primary-color) !important;
+          outline-offset: -1px;
+        }
