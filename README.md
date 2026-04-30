@@ -1,73 +1,63 @@
-# WebAwesome Home Assistant Theme
+# 🎨 WebAwesome Home Assistant Theme
 
-Ett modernt Home Assistant-tema (2025/2026 standard) inspirerat av [WebAwesome](https://webawesome.com/). Temat använder det nya semantiska systemet för variabler och inkluderar globalt Card-Mod-stöd för en polerad, interaktiv upplevelse.
+[![HACS Badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge)
+![HA Version](https://img.shields.io/badge/Home%20Assistant-2024.12+-blue.svg?style=for-the-badge)
 
-## Funktioner
+Ett modernt, högpresterande Home Assistant-tema inspirerat av det prisbelönta ramverket [WebAwesome](https://webawesome.com/). Designat för att ge ditt hem ett rent, professionellt och interaktivt gränssnitt som känns framtidssäkrat för 2026 års standarder.
 
-- 🌓 **Fullt stöd för ljust och mörkt läge** i samma fil (`modes:`).
-- 🎨 **WebAwesome Palett**: Använder WebAwesomes "Sky" (`#0ea5e9`) som primärfärg, med tydliga semantiska färger för Success, Warning och Danger.
-- ✨ **Card-Mod Integration**: Global CSS injiceras för att ge alla kort en mjuk sväveffekt (hover box-shadow) och moderna focus-ringar på inputs och switchar.
-- ⚙️ **2026 Kompatibel**: Använder Home Assistants nya semantiska formulär-variabler (t.ex. `--ha-color-form-background`) för kompatibilitet med WebAwesome-migreringen av HA-frontend.
+---
 
-## Installation
+## ✨ Nyckelfunktioner
 
-### 1. Via HACS (Om konfigurerad som custom repo)
-*(För närvarande avsedd för manuell installation)*
+- 🌓 **Sömlöst Ljust & Mörkt Läge**: Automatisk anpassning i en och samma fil.
+- 🎨 **WebAwesome Palett**: Använder WebAwesomes "Sky"-palett för ett modernt och luftigt utseende.
+- 💎 **Soft UI & Glassmorphism**: Mjuka skuggor och dynamisk transparens inspirerad av Nordic-temat.
+- 🚀 **Optimerat för Mushroom**: Inbyggda variabler för Mushroom Chips som gör styling enklare än någonsin.
+- 🛠️ **Card-Mod Integration**: Global CSS för interaktiva hovringseffekter och förbättrade formulärfält.
 
-### 2. Manuell installation
+---
 
-1. Gå till din Home Assistant konfigurationsmapp (där `configuration.yaml` finns).
-2. Skapa en mapp som heter `themes` om den inte redan finns.
-3. Kopiera filen `webawesome_theme.yaml` in i `themes/` mappen.
-4. Se till att du har följande i din `configuration.yaml`:
-   ```yaml
-   frontend:
-     themes: !include_dir_merge_named themes/
-   ```
-5. Starta om Home Assistant, eller gå till **Developer Tools -> YAML** och klicka på **Reload Themes**.
+## 📸 Förhandsvisning
 
-## Beroenden
+*(Här kan du senare lägga in bilder från din `images/` mapp)*
+> [!TIP]
+> För bästa upplevelse, använd temat tillsammans med [Mushroom Cards](https://github.com/piitaya/lovelace-mushroom).
 
-För att få ut maximalt av detta tema rekommenderas starkt att installera:
+---
 
-- [lovelace-card-mod](https://github.com/thomasloven/lovelace-card-mod) via HACS. Detta möjliggör de avancerade CSS-effekterna som mjuka hovers och skräddarsydda formulärfälts-ramar.
+## 📦 Installation
 
-## Användning
+### Alternativ 1: Via HACS (Rekommenderas)
+1. Öppna **HACS** > **Frontend**.
+2. Klicka på de tre prickarna i hörnet > **Custom repositories**.
+3. Lägg till länken till detta repo och välj kategori **Theme**.
+4. Klicka på **Download** och ladda om din frontend.
 
-När temat är laddat:
-1. Gå till din profil i Home Assistant.
-2. Välj **WebAwesome** under Tema-inställningarna.
-3. Välj "Mörk" eller "Ljus" eller låt den följa systemet.
+### Alternativ 2: Manuell installation
+1. Ladda ner `themes/webawesome.yaml`.
+2. Lägg den i din `config/themes/` mapp.
+3. Se till att du har `!include_dir_merge_named themes` i din `configuration.yaml`.
 
-### Styling av Mushroom Chips
+---
 
-Temat innehåller inbyggda CSS-variabler (`--wa-bg-success`, `--wa-bg-danger`, etc.) som perfekt mixar färgerna med transparens för Mushroom Chips. Du kan använda dessa direkt inuti ett chip för att få en snygg färgkodning utan krångliga Hex-koder:
+## 🛠️ För utvecklare & Power Users
 
-```yaml
-type: custom:mushroom-chips-card
-chips:
-  - type: template
-    entity: switch.my_switch
-    card_mod:
-      style: |
-        ha-card {
-          --chip-background: {% if is_state('switch.my_switch', 'on') %} var(--wa-bg-warning) {% else %} var(--wa-bg-neutral) {% endif %};
-        }
-```
+### Tematillstånd (State colors)
+Temat mappar automatiskt färger för vanliga enheter:
+- **Lights**: `var(--wa-warning)` (Amber)
+- **Binary Sensors**: `var(--wa-info)` (Sky Blue)
+- **Alarms**: Dynamiskt baserat på status (Success/Warning/Danger)
 
-#### Viktigt om Ikon-animationer
-På grund av hur Mushroom bygger upp sina kort med "Shadow DOM" (hela 4 nivåer djupt), kan du **inte** lägga `@keyframes` animationer direkt inuti ett enskilt chip.
+### Använda WebAwesome Bakgrunder
+Du kan använda våra inbyggda variabler i dina egna kort för att matcha temat perfekt:
+`--wa-bg-success`, `--wa-bg-warning`, `--wa-bg-danger`, `--wa-bg-info`.
 
-För att animera ikoner i Mushroom Chips måste du lägga en `card_mod` block på själva föräldrakortet (`mushroom-chips-card`) och rikta in dig på chippet via `nth-child()`, precis som exemplet nedan:
+---
 
-```yaml
-card_mod:
-  style:
-    mushroom-template-chip:nth-child(1)$: |
-      ha-state-icon {
-        animation: spin 2s infinite;
-      }
-      @keyframes spin {
-        100% { transform: rotate(360deg); }
-      }
-```
+## 🤝 Bidra
+Hittat en bugg eller har ett förslag på förbättring? Öppna gärna en Issue eller en Pull Request!
+
+---
+
+*Skapat med ❤️ av Atlas*
