@@ -24,6 +24,13 @@ WebAwesome:
       # Linjer och Gränser
       divider-color: "rgba(15, 23, 42, 0.08)"
       
+      # Klimatfärger (Vibrant för ikoner)
+      state-climate-heat-color: "var(--wa-warning)"
+      state-climate-cool-color: "var(--wa-info)"
+      state-climate-auto-color: "var(--wa-success)"
+      state-climate-dry-color: "var(--wa-purple)"
+      state-climate-fan_only-color: "var(--wa-info)"
+      
       # Dynamisk transparens och skuggor (Nordic-stil)
       wa-chip-opacity: 0.15
       ha-card-box-shadow: "0 2px 4px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05)"
@@ -46,6 +53,13 @@ WebAwesome:
       
       # Linjer och Gränser
       divider-color: "rgba(248, 250, 252, 0.08)"
+      
+      # Klimatfärger (Klara färger för mörkt läge)
+      state-climate-heat-color: "var(--wa-warning)"
+      state-climate-cool-color: "var(--wa-info)"
+      state-climate-auto-color: "var(--wa-success)"
+      state-climate-dry-color: "var(--wa-purple)"
+      state-climate-fan_only-color: "var(--wa-info)"
       
       # Dynamisk transparens och skuggor (Nordic-stil)
       wa-chip-opacity: 0.25
@@ -74,8 +88,6 @@ WebAwesome:
   state-light-active-color: "var(--wa-warning)"
   state-switch-active-color: "var(--wa-success)"
   state-binary_sensor-active-color: "var(--wa-info)"
-  state-climate-heating-color: "var(--wa-danger)"
-  state-climate-cooling-color: "var(--wa-info)"
   
   # Typografi
   ha-font-family-body: "'Inter', system-ui, -apple-system, sans-serif"
