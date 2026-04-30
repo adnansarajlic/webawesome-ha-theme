@@ -4,60 +4,60 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge)
 ![HA Version](https://img.shields.io/badge/Home%20Assistant-2024.12+-blue.svg?style=for-the-badge)
 
-Ett modernt, högpresterande Home Assistant-tema inspirerat av det prisbelönta ramverket [WebAwesome](https://webawesome.com/). Designat för att ge ditt hem ett rent, professionellt och interaktivt gränssnitt som känns framtidssäkrat för 2026 års standarder.
+A modern, high-performance Home Assistant theme inspired by the award-winning [WebAwesome](https://webawesome.com/) framework. Designed to give your home a clean, professional, and interactive interface future-proofed for 2026 standards.
 
 ---
 
-## ✨ Nyckelfunktioner
+## ✨ Key Features
 
-- 🌓 **Sömlöst Ljust & Mörkt Läge**: Automatisk anpassning i en och samma fil.
-- 🎨 **WebAwesome Palett**: Använder WebAwesomes "Sky"-palett för ett modernt och luftigt utseende.
-- 💎 **Soft UI & Glassmorphism**: Mjuka skuggor och dynamisk transparens inspirerad av Nordic-temat.
-- 🚀 **Optimerat för Mushroom**: Inbyggda variabler för Mushroom Chips som gör styling enklare än någonsin.
-- 🛠️ **Card-Mod Integration**: Global CSS för interaktiva hovringseffekter och förbättrade formulärfält.
+- 🌓 **Seamless Light & Dark Mode**: Automatic adaptation within a single theme file.
+- 🎨 **WebAwesome Palette**: Utilizes the official WebAwesome "Sky" palette for a fresh and airy look.
+- 💎 **Soft UI & Glassmorphism**: Elegant soft shadows and dynamic transparency inspired by Nordic aesthetics.
+- 🚀 **Mushroom Optimized**: Native support and built-in variables for Mushroom Cards and Chips.
+- 🛠️ **Card-Mod Integration**: Global CSS for interactive hover effects and modernized form fields.
 
 ---
 
-## 📸 Förhandsvisning
+## 📸 Preview
 
-*(Här kan du senare lägga in bilder från din `images/` mapp)*
+*(Coming soon: Screenshots from the `images/` folder)*
 > [!TIP]
-> För bästa upplevelse, använd temat tillsammans med [Mushroom Cards](https://github.com/piitaya/lovelace-mushroom).
+> For the ultimate experience, use this theme together with [Mushroom Cards](https://github.com/piitaya/lovelace-mushroom).
 
 ---
 
 ## 📦 Installation
 
-### Alternativ 1: Via HACS (Rekommenderas)
-1. Öppna **HACS** > **Frontend**.
-2. Klicka på de tre prickarna i hörnet > **Custom repositories**.
-3. Lägg till länken till detta repo och välj kategori **Theme**.
-4. Klicka på **Download** och ladda om din frontend.
+### Option 1: Via HACS (Recommended)
+1. Open **HACS** > **Frontend**.
+2. Click the three dots in the corner > **Custom repositories**.
+3. Add this repository's URL and select the category **Theme**.
+4. Click **Download** and reload your Home Assistant frontend.
 
-### Alternativ 2: Manuell installation
-1. Ladda ner `themes/webawesome.yaml`.
-2. Lägg den i din `config/themes/` mapp.
-3. Se till att du har `!include_dir_merge_named themes` i din `configuration.yaml`.
+### Option 2: Manual Installation
+1. Download `themes/webawesome.yaml`.
+2. Place it in your `config/themes/` directory.
+3. Ensure you have `!include_dir_merge_named themes` in your `configuration.yaml`.
 
 ---
 
-## 🛠️ För utvecklare & Power Users
+## 🛠️ For Developers & Power Users
 
-### Tematillstånd (State colors)
-Temat mappar automatiskt färger för vanliga enheter:
+### State Colors
+The theme automatically maps colors for common entities:
 - **Lights**: `var(--wa-warning)` (Amber)
 - **Binary Sensors**: `var(--wa-info)` (Sky Blue)
-- **Alarms**: Dynamiskt baserat på status (Success/Warning/Danger)
+- **Alarms**: Dynamic based on status (Success/Warning/Danger)
 
-### Använda WebAwesome Bakgrunder
-Du kan använda våra inbyggda variabler i dina egna kort för att matcha temat perfekt:
+### Using WebAwesome Backgrounds
+You can use our built-in variables in your custom cards to match the theme perfectly:
 `--wa-bg-success`, `--wa-bg-warning`, `--wa-bg-danger`, `--wa-bg-info`.
 
 ---
 
-## 🤝 Bidra
-Hittat en bugg eller har ett förslag på förbättring? Öppna gärna en Issue eller en Pull Request!
+## 🤝 Contributing
+Found a bug or have a suggestion for improvement? Please feel free to open an Issue or a Pull Request!
 
 ---
 
-*Skapat med ❤️ av Atlas*
+*Built with ❤️ by Atlas*
