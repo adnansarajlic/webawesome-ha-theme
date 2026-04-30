@@ -5,6 +5,9 @@ yaml-files:
   - '.github'
   - 'themes'
 
+ignore: |
+  examples/
+
 rules:
   braces: enable
   brackets: enable
