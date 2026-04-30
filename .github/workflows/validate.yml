@@ -1,6 +1,6 @@
 name: Validate YAML
 
-on:
+"on":
   push:
     branches:
       - main
