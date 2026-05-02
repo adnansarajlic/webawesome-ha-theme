@@ -20,7 +20,7 @@
     <li><a href="#screenshots">Screenshots</a></li>
     <li><a href="#features">Features</a></li>
     <li><a href="#installation">Installation</a></li>
-    <li><a href="#usage">Usage & Chip Classes</a></li>
+    <li><a href="#usage-&--chip-classes">Usage & Chip Classes</a></li>
     <li><a href="#color-reference">Color Reference</a></li>
   </ol>
 </details>
@@ -85,33 +85,33 @@ These variables stay consistent across modes and are used for status indicators.
 
 | Variable | Light/Dark Hex | Swatch |
 | :--- | :--- | :--- |
-| `--wa-success` | `#10b981` | ![](https://readme-swatches.vercel.app/10b981) |
-| `--wa-info` | `#0ea5e9` | ![](https://readme-swatches.vercel.app/0ea5e9) |
-| `--wa-warning` | `#f59e0b` | ![](https://readme-swatches.vercel.app/f59e0b) |
-| `--wa-danger` | `#ef4444` | ![](https://readme-swatches.vercel.app/ef4444) |
-| `--wa-purple` | `#8b5cf6` | ![](https://readme-swatches.vercel.app/8b5cf6) |
-| `--wa-brown` | `#92400e` | ![](https://readme-swatches.vercel.app/92400e) |
-| `--wa-neutral` | `#64748b` | ![](https://readme-swatches.vercel.app/64748b) |
+| `--wa-success` | `#10b981` | ![#10b981](https://img.shields.io/static/v1?label=&message=%20&color=10b981) |
+| `--wa-info` | `#0ea5e9` | ![#0ea5e9](https://img.shields.io/static/v1?label=&message=%20&color=0ea5e9) |
+| `--wa-warning` | `#f59e0b` | ![#f59e0b](https://img.shields.io/static/v1?label=&message=%20&color=f59e0b) |
+| `--wa-danger` | `#ef4444` | ![#ef4444](https://img.shields.io/static/v1?label=&message=%20&color=ef4444) |
+| `--wa-purple` | `#8b5cf6` | ![#8b5cf6](https://img.shields.io/static/v1?label=&message=%20&color=8b5cf6) |
+| `--wa-brown` | `#92400e` | ![#92400e](https://img.shields.io/static/v1?label=&message=%20&color=92400e) |
+| `--wa-neutral` | `#64748b` | ![#64748b](https://img.shields.io/static/v1?label=&message=%20&color=64748b) |
 
 ### ☀️ Core UI (Light Mode)
 Based on the WebAwesome Slate/Zinc palette.
 
 | Variable | Hex Code | Swatch |
 | :--- | :--- | :--- |
-| `primary-background` | `#f8fafc` | ![](https://readme-swatches.vercel.app/f8fafc) |
-| `secondary-background` | `#f1f5f9` | ![](https://readme-swatches.vercel.app/f1f5f9) |
-| `card-background` | `#ffffff` | ![](https://readme-swatches.vercel.app/ffffff) |
-| `primary-text` | `#0f172a` | ![](https://readme-swatches.vercel.app/0f172a) |
+| `primary-background` | `#f8fafc` | ![#f8fafc](https://img.shields.io/static/v1?label=&message=%20&color=f8fafc) |
+| `secondary-background` | `#f1f5f9` | ![#f1f5f9](https://img.shields.io/static/v1?label=&message=%20&color=f1f5f9) |
+| `card-background` | `#ffffff` | ![#ffffff](https://img.shields.io/static/v1?label=&message=%20&color=ffffff) |
+| `primary-text` | `#0f172a` | ![#0f172a](https://img.shields.io/static/v1?label=&message=%20&color=0f172a) |
 
 ### 🌙 Core UI (Dark Mode)
 Deep slate backgrounds with high-legibility text.
 
 | Variable | Hex Code | Swatch |
 | :--- | :--- | :--- |
-| `primary-background` | `#0f172a` | ![](https://readme-swatches.vercel.app/0f172a) |
-| `secondary-background` | `#020617` | ![](https://readme-swatches.vercel.app/020617) |
-| `card-background` | `#1e293b` | ![](https://readme-swatches.vercel.app/1e293b) |
-| `primary-text` | `#f8fafc` | ![](https://readme-swatches.vercel.app/f8fafc) |
+| `primary-background` | `#0f172a` | ![#0f172a](https://img.shields.io/static/v1?label=&message=%20&color=0f172a) |
+| `secondary-background` | `#020617` | ![#020617](https://img.shields.io/static/v1?label=&message=%20&color=020617) |
+| `card-background` | `#1e293b` | ![#1e293b](https://img.shields.io/static/v1?label=&message=%20&color=1e293b) |
+| `primary-text` | `#f8fafc` | ![#f8fafc](https://img.shields.io/static/v1?label=&message=%20&color=f8fafc) |
 
 ---
 *Created by Adnan Sarajlic with inspiration from the WebAwesome team.*
