@@ -2,5 +2,6 @@
   "name": "WebAwesome Theme",
   "type": "theme",
   "render_readme": true,
-  "filename": "webawesome.yaml"
+  "filename": "webawesome.yaml",
+  "content_separator": "WebAwesome:"
 }

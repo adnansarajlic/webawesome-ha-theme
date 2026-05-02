@@ -2,8 +2,13 @@
 
 A premium, modern theme for Home Assistant inspired by [WebAwesome](https://webawesome.com/). It features a clean, Nordic-inspired design with a focus on semantic colors, dynamic shadows, and elegant typography.
 
-![WebAwesome Theme Showcase Light Mode](images/light.png)
-![WebAwesome Theme Showcase Dark Mode](images/dark.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/adnansarajlic/webawesome-ha-theme/main/images/light.png" width="400" alt="WebAwesome Light Mode">
+  <img src="https://raw.githubusercontent.com/adnansarajlic/webawesome-ha-theme/main/images/dark.png" width="400" alt="WebAwesome Dark Mode">
+</p>
+<p align="center">
+  <em>Light Mode vs Dark Mode</em>
+</p>
 
 ## ✨ Features
 - **Semantic Colors**: Predefined variables for `--wa-success`, `--wa-warning`, `--wa-danger`, and more.
