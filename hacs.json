@@ -1,5 +1,6 @@
 {
   "name": "WebAwesome Theme",
+  "type": "theme",
   "render_readme": true,
   "filename": "webawesome.yaml"
 }

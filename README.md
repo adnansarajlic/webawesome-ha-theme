@@ -1,63 +1,47 @@
-# 🎨 WebAwesome Home Assistant Theme
+# WebAwesome Theme for Home Assistant 🎨
 
-[![HACS Badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge)
-![HA Version](https://img.shields.io/badge/Home%20Assistant-2024.12+-blue.svg?style=for-the-badge)
+A premium, modern theme for Home Assistant inspired by [WebAwesome](https://webawesome.com/). It features a clean, Nordic-inspired design with a focus on semantic colors, dynamic shadows, and elegant typography.
 
-A modern, high-performance Home Assistant theme inspired by the award-winning [WebAwesome](https://webawesome.com/) framework. Designed to give your home a clean, professional, and interactive interface future-proofed for 2026 standards.
+![WebAwesome Theme Showcase Light Mode](images/light.png)
+![WebAwesome Theme Showcase Dark Mode](images/dark.png)
 
----
-
-## ✨ Key Features
-
-- 🌓 **Seamless Light & Dark Mode**: Automatic adaptation within a single theme file.
-- 🎨 **WebAwesome Palette**: Utilizes the official WebAwesome "Sky" palette for a fresh and airy look.
-- 💎 **Soft UI & Glassmorphism**: Elegant soft shadows and dynamic transparency inspired by Nordic aesthetics.
-- 🚀 **Mushroom Optimized**: Native support and built-in variables for Mushroom Cards and Chips.
-- 🛠️ **Card-Mod Integration**: Global CSS for interactive hover effects and modernized form fields.
-
----
-
-## 📸 Preview
-
-*(Coming soon: Screenshots from the `images/` folder)*
-> [!TIP]
-> For the ultimate experience, use this theme together with [Mushroom Cards](https://github.com/piitaya/lovelace-mushroom).
-
----
+## ✨ Features
+- **Semantic Colors**: Predefined variables for `--wa-success`, `--wa-warning`, `--wa-danger`, and more.
+- **Dynamic Nordic Shadows**: Soft, floating shadows that adapt to light and dark modes.
+- **Premium Typography**: Uses the Inter font family for a crisp, high-end feel.
+- **Rounded Aesthetics**: Balanced border radii (12px-16px) for a friendly and modern UI.
+- **Card-Mod Optimized**: Built-in support for advanced styling of Mushroom chips and other cards.
 
 ## 📦 Installation
 
-### Option 1: Via HACS (Recommended)
-1. Open **HACS** > **Frontend**.
-2. Click the three dots in the corner > **Custom repositories**.
-3. Add this repository's URL and select the category **Theme**.
-4. Click **Download** and reload your Home Assistant frontend.
+### Via HACS (Recommended)
+1. Ensure [HACS](https://hacs.xyz/) is installed.
+2. Go to **HACS** -> **Frontend**.
+3. Click the three dots in the top right and select **Custom repositories**.
+4. Add `adnansarajlic/webawesome-ha-theme` with type **Theme**.
+5. Click **Download**.
 
-### Option 2: Manual Installation
-1. Download `themes/webawesome.yaml`.
-2. Place it in your `config/themes/` directory.
-3. Ensure you have `!include_dir_merge_named themes` in your `configuration.yaml`.
+### Manual Installation
+1. Download `themes/webawesome.yaml` from this repository.
+2. Place it in your `themes/` directory within your Home Assistant configuration folder.
+3. Restart Home Assistant or reload themes.
+
+## 🚀 Usage
+To get the most out of WebAwesome, use the semantic color variables in your `card_mod` configurations:
+
+```yaml
+card_mod:
+  style: |
+    ha-card {
+      background: var(--wa-success);
+      color: white;
+    }
+```
+
+## 🛠️ Components Used in Examples
+- [Lovelace Card Mod](https://github.com/thomasloven/lovelace-card-mod)
+- [Mushroom Cards](https://github.com/piitaya/lovelace-mushroom)
+- [Bubble Card](https://github.com/Clooos/Bubble-Card)
 
 ---
-
-## 🛠️ For Developers & Power Users
-
-### State Colors
-The theme automatically maps colors for common entities:
-- **Lights**: `var(--wa-warning)` (Amber)
-- **Binary Sensors**: `var(--wa-info)` (Sky Blue)
-- **Alarms**: Dynamic based on status (Success/Warning/Danger)
-
-### Using WebAwesome Backgrounds
-You can use our built-in variables in your custom cards to match the theme perfectly:
-`--wa-bg-success`, `--wa-bg-warning`, `--wa-bg-danger`, `--wa-bg-info`.
-
----
-
-## 🤝 Contributing
-Found a bug or have a suggestion for improvement? Please feel free to open an Issue or a Pull Request!
-
----
-
-*Built with ❤️ by Atlas*
+*Created by Adnan Sarajlic with inspiration from the WebAwesome team.*

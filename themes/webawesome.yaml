@@ -135,9 +135,8 @@ WebAwesome:
         --chip-background: color-mix(in srgb, var(--wa-danger) 20%, transparent) !important;
         --chip-border-color: var(--wa-danger) !important;
         --chip-border-width: 2px !important;
-        --chip-border-style: dashed !important;
+        --chip-border-style: solid !important;
         --chip-icon-color: var(--wa-danger) !important;
-        --chip-font-size: 9px !important;
         color: var(--primary-text-color) !important;
         animation: wa-ping-danger 2s infinite;
       }
@@ -149,12 +148,12 @@ WebAwesome:
 
       ha-card.wa-chip-danger-solid {
         --chip-background: var(--wa-danger) !important;
-        --chip-border-color: var(--wa-danger) !important;
         --chip-border-width: 2px !important;
-        --chip-border-style: dashed !important;
-        --chip-icon-color: var(--primary-text-color) !important;
-        --chip-font-size: 22px !important;
-        color: var(--primary-text-color) !important;
+        --chip-border-style: solid !important;
+        --chip-border-color: var(--wa-danger) !important;
+        --chip-icon-color: #ffffff !important;
+        color: #ffffff !important;
+        font-weight: bold;
         animation: wa-ping-danger-solid 2s infinite;
       }
       @keyframes wa-ping-danger-solid {
@@ -167,9 +166,8 @@ WebAwesome:
         --chip-background: color-mix(in srgb, var(--wa-warning) 30%, transparent) !important;
         --chip-border-color: var(--wa-warning) !important;
         --chip-border-width: 2px !important;
-        --chip-border-style: dashed !important;
+        --chip-border-style: solid !important;
         --chip-icon-color: var(--wa-warning) !important;
-        --chip-font-size: 9px !important;
         color: var(--primary-text-color) !important;
         animation: wa-ping-warning 2s infinite;
       }
@@ -183,11 +181,25 @@ WebAwesome:
         --chip-background: color-mix(in srgb, var(--wa-info) 20%, transparent) !important;
         --chip-border-color: var(--wa-info) !important;
         --chip-border-width: 2px !important;
-        --chip-border-style: dashed !important;
+        --chip-border-style: solid !important;
         --chip-icon-color: var(--wa-info) !important;
-        --chip-font-size: 9px !important;
         color: var(--primary-text-color) !important;
         animation: wa-ping-info 2s infinite;
+      }
+
+      ha-card.wa-chip-success {
+        --chip-background: color-mix(in srgb, var(--wa-success) 20%, transparent) !important;
+        --chip-border-color: var(--wa-success) !important;
+        --chip-border-width: 2px !important;
+        --chip-border-style: solid !important;
+        --chip-icon-color: var(--wa-success) !important;
+        color: var(--primary-text-color) !important;
+        animation: wa-ping-success 2s infinite;
+      }
+      @keyframes wa-ping-success {
+        0% {box-shadow: 0 0 0 0 color-mix(in srgb, var(--wa-success) 70%, transparent);}
+        70% {box-shadow: 0 0 0 10px transparent;}
+        100% {box-shadow: 0 0 0 0 transparent;}
       }
       @keyframes wa-ping-info {
         0% {box-shadow: 0 0 0 0 color-mix(in srgb, var(--wa-info) 70%, transparent);}
