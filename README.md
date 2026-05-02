@@ -1,61 +1,90 @@
 # WebAwesome Theme for Home Assistant 🎨
 
-A premium, modern theme for Home Assistant inspired by [WebAwesome](https://webawesome.com/). It features a clean, Nordic-inspired design with a focus on semantic colors, dynamic shadows, and elegant typography.
+<div align="center">
 
-![Light Mode Showcase](https://raw.githubusercontent.com/adnansarajlic/webawesome-ha-theme/main/images/light.png)
-![Dark Mode Showcase](https://raw.githubusercontent.com/adnansarajlic/webawesome-ha-theme/main/images/dark.png)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) [![Last Commit](https://img.shields.io/github/last-commit/adnansarajlic/webawesome-ha-theme?style=for-the-badge)](https://github.com/adnansarajlic/webawesome-ha-theme/commits/main) [![GitHub license](https://img.shields.io/github/license/adnansarajlic/webawesome-ha-theme?style=for-the-badge)](LICENSE)
 
-## ✨ Features
-- **Semantic Colors**: Predefined variables for `--wa-success`, `--wa-warning`, `--wa-danger`, and more.
-- **Dynamic Nordic Shadows**: Soft, floating shadows that adapt to light and dark modes.
-- **Premium Typography**: Uses the Inter font family for a crisp, high-end feel.
-- **Rounded Aesthetics**: Balanced border radii (12px-16px) for a friendly and modern UI.
-- **Card-Mod Optimized**: Built-in support for advanced styling of Mushroom chips and other cards.
+</div>
 
-## 🎨 Color Reference (WebAwesome Palette)
+<div align="center">
+  <p align="center">
+    A premium, modern theme for Home Assistant inspired by <a href="https://webawesome.com/">WebAwesome</a>.
+    <br />
+  </p>
+</div>
 
-WebAwesome uses a semantic color system. Use these variables in your `card_mod` style to keep a consistent look:
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#screenshots">Screenshots</a></li>
+    <li><a href="#home-assistant-setup">Home Assistant Setup</a></li>
+    <li><a href="#hacs-installation">HACS installation</a></li>
+    <li><a href="#enable-theme">Enable theme</a></li>
+    <li><a href="#color-options">Color Options</a></li>
+    <li><a href="#color-reference">Color Reference</a></li>
+  </ol>
+</details>
 
-| Variable | Description | Example Hex (Light/Dark) |
-| :--- | :--- | :--- |
-| `--wa-success` | Success / Positive states | `#10b981` |
-| `--wa-warning` | Warning / Attention needed | `#f59e0b` |
-| `--wa-danger` | Danger / Alarm states | `#ef4444` |
-| `--wa-info` | Information / Active states | `#0ea5e9` |
-| `--wa-purple` | Special states / Night mode | `#8b5cf6` |
-| `--wa-brown` | Nature / Coffee / Warm states | `#92400e` |
-| `--wa-neutral` | Inactive / Muted states | `#64748b` |
+## Screenshots
 
-## 📦 Installation
+<table>
+  <tr>
+    <td align="center" width="50%"><strong>Light Mode</strong><br /><img src="images/light.png" alt="WebAwesome Light Mode" width="620" /></td>
+    <td align="center" width="50%"><strong>Dark Mode</strong><br /><img src="images/dark.png" alt="WebAwesome Dark Mode" width="620" /></td>
+  </tr>
+</table>
 
-### Via HACS (Recommended)
-1. Ensure [HACS](https://hacs.xyz/) is installed.
-2. Go to **HACS** -> **Frontend**.
-3. Click the three dots in the top right and select **Custom repositories**.
-4. Add `adnansarajlic/webawesome-ha-theme` with type **Theme**.
-5. Click **Download**.
+### Home Assistant Setup
 
-### Manual Installation
-1. Download `themes/webawesome.yaml` from this repository.
-2. Place it in your `themes/` directory within your Home Assistant configuration folder.
-3. Restart Home Assistant or reload themes.
-
-## 🚀 Usage Example
-Use the semantic color variables in your `card_mod` configurations for perfect consistency:
+Make sure that under the **configuration.yaml** file you have the following:
 
 ```yaml
-card_mod:
-  style: |
-    ha-card {
-      border-left: 4px solid var(--wa-success);
-      background: color-mix(in srgb, var(--wa-success) 10%, var(--card-background-color));
-    }
+frontend:
+  themes: !include_dir_merge_named themes
 ```
 
-## 🛠️ Components Used in Examples
-- [Lovelace Card Mod](https://github.com/thomasloven/lovelace-card-mod)
-- [Mushroom Cards](https://github.com/piitaya/lovelace-mushroom)
-- [Bubble Card](https://github.com/Clooos/Bubble-Card)
+### HACS installation
+
+1. Go into the Community Store (HACS)
+2. Search for WebAwesome theme
+3. Open the theme
+4. Press Install
+5. (optional) Restart Home Assistant
+
+### Enable theme
+
+1. Open your Home Assistant **Profile**
+2. Under **Themes**, select the new WebAwesome theme
+
+### Color Options
+
+Any of the colors can be used anywhere a color parameter is accepted in Home Assistant's configuration.
+
+```yaml
+## Example graph card using color from the theme variables.
+
+type: custom:mini-graph-card
+entities:
+  - sensor.temperature
+name: Weather
+line_color: var(--wa-success)
+line_width: 8
+font_size: 100
+hours_to_show: 168
+points_per_hour: 0.25
+```
+
+### Color Reference
+
+| Color Variable | Color Code | Color |
+| :--- | :--- | :--- |
+| `--wa-success` | `#10b981` | ![](https://readme-swatches.vercel.app/10b981) |
+| `--wa-info` | `#0ea5e9` | ![](https://readme-swatches.vercel.app/0ea5e9) |
+| `--wa-warning` | `#f59e0b` | ![](https://readme-swatches.vercel.app/f59e0b) |
+| `--wa-danger` | `#ef4444` | ![](https://readme-swatches.vercel.app/ef4444) |
+| `--wa-purple` | `#8b5cf6` | ![](https://readme-swatches.vercel.app/8b5cf6) |
+| `--wa-brown` | `#92400e` | ![](https://readme-swatches.vercel.app/92400e) |
+| `--wa-neutral` | `#64748b` | ![](https://readme-swatches.vercel.app/64748b) |
 
 ---
 *Created by Adnan Sarajlic with inspiration from the WebAwesome team.*
