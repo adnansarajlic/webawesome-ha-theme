@@ -10,6 +10,7 @@
   <p align="center">
     A premium, modern theme for Home Assistant inspired by <a href="https://webawesome.com/">WebAwesome</a>.
     <br />
+    Focused on semantic colors, dynamic shadows, and elegant typography.
   </p>
 </div>
 
@@ -17,10 +18,9 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#screenshots">Screenshots</a></li>
-    <li><a href="#home-assistant-setup">Home Assistant Setup</a></li>
-    <li><a href="#hacs-installation">HACS installation</a></li>
-    <li><a href="#enable-theme">Enable theme</a></li>
-    <li><a href="#color-options">Color Options</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#usage">Usage & Chip Classes</a></li>
     <li><a href="#color-reference">Color Reference</a></li>
   </ol>
 </details>
@@ -34,49 +34,56 @@
   </tr>
 </table>
 
-### Home Assistant Setup
+## ✨ Features
+- **Semantic Color System**: Built-in variables for success, warning, danger, and info states.
+- **Dynamic Nordic Shadows**: Soft floating shadows that adjust intensity between modes.
+- **Inter Typography**: Uses the crisp *Inter* font family for a professional look.
+- **Soft UI**: Balanced border-radius (12px-16px) across all cards and dialogs.
+- **Mushroom Optimized**: Advanced styling for chips and template cards.
 
-Make sure that under the **configuration.yaml** file you have the following:
+## 📦 Installation
 
+### Via HACS (Recommended)
+1. Go to **HACS** -> **Frontend**.
+2. Click the three dots -> **Custom repositories**.
+3. Add `adnansarajlic/webawesome-ha-theme` with type **Theme**.
+4. Click **Download**.
+
+### Manual Installation
+1. Download `themes/webawesome.yaml`.
+2. Place it in your `themes/` folder.
+3. Add the following to your `configuration.yaml`:
 ```yaml
 frontend:
   themes: !include_dir_merge_named themes
 ```
 
-### HACS installation
+## 🚀 Usage & Chip Classes
 
-1. Go into the Community Store (HACS)
-2. Search for WebAwesome theme
-3. Open the theme
-4. Press Install
-5. (optional) Restart Home Assistant
+WebAwesome includes custom CSS classes for **Mushroom Chips**. Use these via `card_mod` -> `class` for consistent status indicators:
 
-### Enable theme
+- `wa-chip-success`: Pulsing green with dynamic transparency.
+- `wa-chip-info`: Pulsing blue.
+- `wa-chip-warning`: Pulsing amber.
+- `wa-chip-danger`: Pulsing red.
+- `wa-chip-danger-solid`: Solid high-visibility red for critical alarms.
 
-1. Open your Home Assistant **Profile**
-2. Under **Themes**, select the new WebAwesome theme
-
-### Color Options
-
-Any of the colors can be used anywhere a color parameter is accepted in Home Assistant's configuration.
-
+Example:
 ```yaml
-## Example graph card using color from the theme variables.
-
-type: custom:mini-graph-card
-entities:
-  - sensor.temperature
-name: Weather
-line_color: var(--wa-success)
-line_width: 8
-font_size: 100
-hours_to_show: 168
-points_per_hour: 0.25
+type: custom:mushroom-chips-card
+chips:
+  - type: template
+    icon: mdi:fire
+    card_mod:
+      class: wa-chip-danger
 ```
 
-### Color Reference
+## 🎨 Color Reference
 
-| Color Variable | Color Code | Color |
+### 🌈 Semantic Palette (Global)
+These variables stay consistent across modes and are used for status indicators.
+
+| Variable | Light/Dark Hex | Swatch |
 | :--- | :--- | :--- |
 | `--wa-success` | `#10b981` | ![](https://readme-swatches.vercel.app/10b981) |
 | `--wa-info` | `#0ea5e9` | ![](https://readme-swatches.vercel.app/0ea5e9) |
@@ -85,6 +92,26 @@ points_per_hour: 0.25
 | `--wa-purple` | `#8b5cf6` | ![](https://readme-swatches.vercel.app/8b5cf6) |
 | `--wa-brown` | `#92400e` | ![](https://readme-swatches.vercel.app/92400e) |
 | `--wa-neutral` | `#64748b` | ![](https://readme-swatches.vercel.app/64748b) |
+
+### ☀️ Core UI (Light Mode)
+Based on the WebAwesome Slate/Zinc palette.
+
+| Variable | Hex Code | Swatch |
+| :--- | :--- | :--- |
+| `primary-background` | `#f8fafc` | ![](https://readme-swatches.vercel.app/f8fafc) |
+| `secondary-background` | `#f1f5f9` | ![](https://readme-swatches.vercel.app/f1f5f9) |
+| `card-background` | `#ffffff` | ![](https://readme-swatches.vercel.app/ffffff) |
+| `primary-text` | `#0f172a` | ![](https://readme-swatches.vercel.app/0f172a) |
+
+### 🌙 Core UI (Dark Mode)
+Deep slate backgrounds with high-legibility text.
+
+| Variable | Hex Code | Swatch |
+| :--- | :--- | :--- |
+| `primary-background` | `#0f172a` | ![](https://readme-swatches.vercel.app/0f172a) |
+| `secondary-background` | `#020617` | ![](https://readme-swatches.vercel.app/020617) |
+| `card-background` | `#1e293b` | ![](https://readme-swatches.vercel.app/1e293b) |
+| `primary-text` | `#f8fafc` | ![](https://readme-swatches.vercel.app/f8fafc) |
 
 ---
 *Created by Adnan Sarajlic with inspiration from the WebAwesome team.*
