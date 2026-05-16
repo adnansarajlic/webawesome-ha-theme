@@ -63,9 +63,13 @@ frontend:
 WebAwesome includes custom CSS classes for **Mushroom Chips**. Use these via `card_mod` -> `class` for consistent status indicators:
 
 - `wa-chip-success`: Pulsing green with dynamic transparency.
+- `wa-chip-success-static`: Static green with dynamic transparency (no pulse).
 - `wa-chip-info`: Pulsing blue.
+- `wa-chip-info-static`: Static blue (no pulse).
 - `wa-chip-warning`: Pulsing amber.
+- `wa-chip-warning-static`: Static amber (no pulse).
 - `wa-chip-danger`: Pulsing red.
+- `wa-chip-danger-static`: Static red (no pulse).
 - `wa-chip-danger-solid`: Solid high-visibility red for critical alarms.
 
 Example:
