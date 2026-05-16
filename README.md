@@ -29,8 +29,8 @@
 
 <table>
   <tr>
-    <td align="center" width="50%"><strong>Light Mode</strong><br /><img src="images/light.png" alt="WebAwesome Light Mode" width="620" /></td>
-    <td align="center" width="50%"><strong>Dark Mode</strong><br /><img src="images/dark.png" alt="WebAwesome Dark Mode" width="620" /></td>
+    <td align="center" width="50%"><strong>Light Mode</strong><br /><img src="https://raw.githubusercontent.com/adnansarajlic/webawesome-ha-theme/main/images/light.png" alt="WebAwesome Light Mode" width="620" /></td>
+    <td align="center" width="50%"><strong>Dark Mode</strong><br /><img src="https://raw.githubusercontent.com/adnansarajlic/webawesome-ha-theme/main/images/dark.png" alt="WebAwesome Dark Mode" width="620" /></td>
   </tr>
 </table>
 
