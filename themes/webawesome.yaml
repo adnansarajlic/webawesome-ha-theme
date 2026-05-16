@@ -244,6 +244,31 @@ WebAwesome:
         color: var(--primary-text-color) !important;
       }
 
+      /* Highlight Cards (Standard-kort med accentfärg och vänster-border) */
+      ha-card.wa-card-danger {
+        --icon-color: var(--wa-danger) !important;
+        background: color-mix(in srgb, var(--wa-danger) 5%, var(--card-background-color)) !important;
+        border-left: 4px solid var(--wa-danger) !important;
+      }
+
+      ha-card.wa-card-warning {
+        --icon-color: var(--wa-warning) !important;
+        background: color-mix(in srgb, var(--wa-warning) 5%, var(--card-background-color)) !important;
+        border-left: 4px solid var(--wa-warning) !important;
+      }
+
+      ha-card.wa-card-success {
+        --icon-color: var(--wa-success) !important;
+        background: color-mix(in srgb, var(--wa-success) 5%, var(--card-background-color)) !important;
+        border-left: 4px solid var(--wa-success) !important;
+      }
+
+      ha-card.wa-card-info {
+        --icon-color: var(--wa-info) !important;
+        background: color-mix(in srgb, var(--wa-info) 5%, var(--card-background-color)) !important;
+        border-left: 4px solid var(--wa-info) !important;
+      }
+
     "ha-switch":
       $: |
         /* WebAwesome-inspirerad focus ring för switchar */

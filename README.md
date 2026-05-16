@@ -58,10 +58,12 @@ frontend:
   themes: !include_dir_merge_named themes
 ```
 
-## 🚀 Usage & Chip Classes
+## 🚀 Usage: Chip & Highlight Card Classes
 
-WebAwesome includes custom CSS classes for **Mushroom Chips**. Use these via `card_mod` -> `class` for consistent status indicators:
+WebAwesome includes custom CSS classes for **Cards** and **Chips**. Use these via `card_mod` -> `class` for consistent semantic styling.
 
+### 🏷️ Chip Classes
+For status indicators (like Mushroom Chips):
 - `wa-chip-success`: Pulsing green with dynamic transparency.
 - `wa-chip-success-static`: Static green with dynamic transparency (no pulse).
 - `wa-chip-info`: Pulsing blue.
@@ -80,6 +82,23 @@ chips:
     icon: mdi:fire
     card_mod:
       class: wa-chip-danger
+```
+
+### 🎴 Highlight Card Classes
+Applies a subtle semantic background, colored icon, and a left border accent to full cards:
+- `wa-card-success`: Green accent.
+- `wa-card-info`: Blue accent.
+- `wa-card-warning`: Amber accent.
+- `wa-card-danger`: Red accent.
+
+Example:
+```yaml
+type: custom:mushroom-template-card
+primary: Living Room
+secondary: Heating active
+icon: mdi:fire
+card_mod:
+  class: wa-card-danger
 ```
 
 ## 🎨 Color Reference
